@@ -11,13 +11,6 @@ class Solution {
             }
         }
     
-        int[] answer = new int[set.size()];
-        
-        int index = 0;
-        for (Integer num : set) {
-            answer[index++] = num; 
-        }
-        
-        return answer; 
+        return set.stream().sorted().mapToInt(Integer::intValue).toArray();
     }
 }
