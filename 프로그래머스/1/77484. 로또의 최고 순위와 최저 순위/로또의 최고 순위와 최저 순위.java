@@ -6,12 +6,12 @@ class Solution {
         HashSet<Integer> sets = new HashSet<Integer>(Arrays.asList(Arrays.stream(win_nums).boxed().toArray(Integer[]::new)));
         int count = 0;
         int max = 0;
-        for(int i=0;i<lottos.length;i++){
-            if(sets.contains(lottos[i])){
+        for(int i:lottos){
+            if(sets.contains(i)){
                 count++;
             }
             
-            if(lottos[i]==0){
+            if(i==0){
                 max ++;
             }
         }
